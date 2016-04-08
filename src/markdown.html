@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>STATS TSP Extension Command</title>
+
+<link rel="stylesheet" type="text/css" href="extsyntax.css" />
+
+</head>
+
+<body>
+<h1>STATS TSP Extension Command</h1>
+
+<p>Solves the traveling salesperson optimization problem</p>
+<div class="syntax">
+<p>STATS TSP NODES = <em>node variables</em><sup>&#42;</sup><br/>
+</p>
+
+<p>/OPTIONS START = <em>starting node variable</em><br/>
+TYPE = TSP<sup>&#42;&#42;</sup> or ATSP<br/>
+METHOD = FARTHEST<sup>&#42;&#42;</sup> or NEAREST or CHEAPEST or ARBITRARY or NN or REPETITIVE or TWO_OPT<br/> 
+</p>
+
+<p><sup>&#42;</sup> Required<br/>
+<sup>&#42;&#42;</sup> Default</p>
+</div>
+<p>STATS TSP /HELP prints this information and does nothing else.</p>
+
+<pre class="example"><code>STATS TSP NODES=city1 city2 city3 city4 city5 city6
+/OPTIONS START=city3.
+</code></pre>
+
+<p>This extension uses the TSP package in R to solve the traveling salesperson optimization problem. The extension supports both symmetric and asymmetric costs (distances).</p>
+<p>In what follows, the term <b>node</b> is used to represent the points or locations to be included in the optimization problem and the term <b>cost</b> describes the distance or generalized distance between nodes.</p>
+<p>The active dataset must contain one variable for each node to be included. The value of the ith case for a particular variable is the cost  from the node represented by the variable to the node represented by the ith variable in file order. The value of the ith case for the ith variable in file order must be 0. The following table shows an example of the data structure for four nodes that are represented by the variables Node1, Node2, Node3 and Node4. For example, the cost between Node1 and Node2 is 1167.</p>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th{ text-align: center;}
+td{ text-align: right;}
+</style>
+ <table style="width:25%">
+  <tr>
+    <th>Node1</th>
+    <th>Node2</th>
+    <th>Node3</th>
+	<th>Node4</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1167</td>
+    <td>1579</td>
+    <td>437</td>
+  </tr>
+  <tr>
+    <td>1167</td>
+    <td>0</td>
+    <td>413</td>
+    <td>1422</td>
+  </tr>
+  <tr>
+    <td>1579</td>
+    <td>413</td>
+    <td>0</td>
+    <td>1832</td>
+  </tr>
+  <tr>
+    <td>437</td>
+    <td>1422</td>
+    <td>1832</td>
+    <td>0</td>
+  </tr>
+</table> 
+
+<p><strong>NODES</strong> specifies the names of the variables that represent the nodes to be included in the optimization problem. You can set the starting node with the <strong>START</strong> keyword on <strong>OPTIONS</strong>.</p>
+
+<h2>OPTIONS</h2>
+
+<p><strong>START</strong> specifies the name of the variable that represents the starting node, if any.</p>
+
+<p><strong>TYPE</strong> specifies whether costs are symmetric or asymmetric. Symmetric or asymmetric refers to whether the cost from node i to node j is the same as the cost from node j to node i. When the costs are the same for all i and j, the costs are symmetric. <strong>TSP</strong> specifies symmetric and <strong>ATSP</strong> specifies asymmetric. The default is <strong>TSP</strong>.</p>
+
+<p><strong>METHOD</strong> specifies the heuristics method.
+<ul>
+<li><strong>FARTHEST.</strong> Farthest insertion method. In each step of the insertion process, the inserted node is the one which is farthest from any of the previously inserted nodes.</li>
+<li><strong>NEAREST.</strong> Nearest insertion method. In each step of the insertion process, the inserted node is the one which is nearest to one of the previously inserted nodes.</li>
+<li><strong>CHEAPEST.</strong> Cheapest insertion method. In each step of the insertion process, the inserted node is the one which has the smallest insertion cost.</li>
+<li><strong>ARBITRARY.</strong> Arbitrary insertion method. In each step of the insertion process, the inserted node is randomly selected from the nodes that have not yet been inserted.</li>
+<li><strong>NN.</strong> Nearest neighbor method. In each step, add the node that is closest to the last added node. The first node is randomly selected.</li>
+<li><strong>REPETITIVE.</strong> Repetitive nearest neighbor method. Repeats the nearest neighbor method using each node as the starting point and then selects the best solution from that set.</li>
+<li><strong>TWO_OPT.</strong> 2-Opt method.</li>
+</ul></p>
+
+<h3>Acknowledgements</h3>
+This extension uses the R TSP package written by Michael Hahsler and Kurt Hornik.
+<p>&copy; Copyright IBM Corp. 1989, 2016</p>
+
+</body>
+
+</html>
+

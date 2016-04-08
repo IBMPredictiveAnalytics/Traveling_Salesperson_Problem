@@ -1,0 +1,22 @@
+<Command xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extension-1.0.xsd" Name="STATS TSP" Language="R" Mode="Source">
+    <Subcommand Name="" IsArbitrary="False" Occurrence="Optional">
+		<Parameter Name="NODES" ParameterType="VariableNameList"/>
+    </Subcommand>
+    <Subcommand Name="OPTIONS">
+        <Parameter Name="START" ParameterType="VariableName"/>
+        <Parameter Name="TYPE" ParameterType="Keyword">
+            <EnumValue Name="TSP"/>
+            <EnumValue Name="ATSP"/>
+        </Parameter>
+		<Parameter Name="METHOD" ParameterType="Keyword">
+            <EnumValue Name="NN"/>
+            <EnumValue Name="REPETITIVE"/>
+            <EnumValue Name="NEAREST"/>
+            <EnumValue Name="FARTHEST"/>
+            <EnumValue Name="CHEAPEST"/>
+            <EnumValue Name="ARBITRARY"/>
+            <EnumValue Name="TWO_OPT"/>
+        </Parameter>
+	</Subcommand>
+	<Subcommand Name="HELP" Occurrence="Optional"/>
+</Command>

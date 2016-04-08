@@ -1,0 +1,43 @@
+#/***********************************************************************
+# * Licensed Materials - Property of IBM 
+# *
+# * IBM SPSS Products: Statistics Common
+# *
+# * (C) Copyright IBM Corp. 1989, 2016
+# *
+# * US Government Users Restricted Rights - Use, duplication or disclosure
+# * restricted by GSA ADP Schedule Contract with IBM Corp. 
+# ************************************************************************/
+
+# NLS_ENCODING=UTF-8
+# IBMUPYTH
+
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: STATS_TSP.R:5
+msgid "Traveling Salesperson Analysis"
+msgstr ""
+
+#: STATS_TSP.R:6
+msgid "Traveling Salesperson Analysis: Warnings"
+msgstr ""
+
+#: STATS_TSP.R:14
+msgid "Variable specified on START keyword must also be specified on NODES keyword."
+msgstr ""
+
+#: STATS_TSP.R:66
+msgid "The R %s package is required but could not be loaded."
+msgstr ""
+
+#: STATS_TSP.R:176
+msgid "End of procedure"
+msgstr ""
+
+#: STATS_TSP.R:203
+msgid "Message Number"
+msgstr ""
