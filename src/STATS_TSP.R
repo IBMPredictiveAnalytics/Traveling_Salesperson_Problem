@@ -60,7 +60,8 @@ tsppath <- function(nodes, startpoint=NULL, type="tsp", method="farthest")
         values <- spssdata.GetDataFromSPSS(allvars)
     }
     count = nrow(values)
-    data <- matrix(unlist(values), count, count, dimnames=labels(values)[2])
+    varname <- unlist(labels(values)[2])
+    data <- matrix(unlist(values), count, count, dimnames=list(varname, varname))
     
     tryCatch(library("TSP"), error=function(e){
         warns$warn(gtxtf("The R %s package is required but could not be loaded.", "TSP"),dostop=TRUE)

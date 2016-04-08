@@ -6,7 +6,7 @@ Misc-Files: extsyntax.css,markdown.html
 Summary: Solves the traveling salesperson optimization problem
 Description: This extension uses the TSP package in R to solve the tra
  veling salesperson optimization problem. The extension supports both 
- symmetric and asymmetric costs (or distances). 
+ symmetric and asymmetric costs (or distances).
 Version: 1.0.0
 Product-Version: 18
 Plugins: R
