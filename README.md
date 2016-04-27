@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # Traveling_Salesperson_Problem
-=======
-# STATS TSP
->>>>>>> eaa8b0bf9ab5093086f3aecdde7ca5b34a037fcc
 ## Solves the traveling salesperson optimization problem
  This extension uses the TSP package in R to solve the traveling salesperson optimization problem. The extension supports both symmetric and asymmetric costs (or distances).
 
