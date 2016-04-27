@@ -1,5 +1,5 @@
-Name: STATS TSP
-Dialog-Specs: STATS_TSP.spd
+Name: Traveling Salesperson Problem
+Dialog-Specs: Traveling_Salesperson_Problem.spd
 Command-Specs: STATS_TSP.xml
 Code-Files: STATS_TSP.R
 Misc-Files: extsyntax.css,markdown.html

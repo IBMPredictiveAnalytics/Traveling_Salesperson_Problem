@@ -125,7 +125,7 @@ Run <- function(args) {
     ))
     
     if ("HELP" %in% attr(args,"names")) {
-        helper(cmdname)
+        helper("Traveling_Salesperson_Problem")
     }
     else {
         res <- spsspkg.processcmd(oobj, args, "tsppath")
