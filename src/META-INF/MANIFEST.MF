@@ -1,4 +1,5 @@
 Name: Traveling Salesperson Problem
+Display-Name: Traveling Salesperson Problem
 Dialog-Specs: Traveling_Salesperson_Problem.spd
 Command-Specs: STATS_TSP.xml
 Code-Files: STATS_TSP.R
@@ -12,3 +13,4 @@ Product-Version: 18
 Plugins: R
 R-Packages: TSP
 Translation-Catalogues: lang
+Product-Version-Maximum: 99
